@@ -43,3 +43,19 @@ li a:hover:not(.active) {
 .active {
     background-color: #8a8a8a;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.parent {
+    display: grid;
+    grid-auto-flow: dense;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+}

@@ -9,11 +9,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslationComponent } from './translation/translation.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TranslationComponent
+    TranslationComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
