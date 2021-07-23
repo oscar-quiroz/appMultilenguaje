@@ -1,1 +1,40 @@
-<app-translation></app-translation>
+<ul>
+    <li>
+        <a>{{ 'home' | translate }}</a>
+    </li>
+    <li><a>{{ 'news' | translate }}</a></li>
+    <li><a>{{ 'contact' | translate }}</a></li>
+    <div class="dropdown">
+
+    </div>
+    <li style="float:right">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ 'idioma' | translate }}
+          </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+                <a class="dropdown-item" [ngClass]="{'active': language == 'es'}" (click)="changeLanguage('es')">
+                    <img src="https://flagcdn.com/16x12/es.png" srcset="https://flagcdn.com/32x24/es.png 2x,
+                  https://flagcdn.com/48x36/za.png 3x" width="16" height="12" alt="españa">
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" [ngClass]="{'active': language == 'en'}" (click)="changeLanguage('en')">
+                    <img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,
+                    https://flagcdn.com/48x36/za.png 3x" width="16" height="12" alt="inglaterra">
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" [ngClass]="{'active': language == 'po'}" (click)="changeLanguage('po')">
+                    <img src="https://flagcdn.com/16x12/pt.png" srcset="https://flagcdn.com/32x24/pt.png 2x,
+                  https://flagcdn.com/48x36/za.png 3x" width="16" height="12" alt="portugal">
+                </a>
+            </li>
+        </ul>
+
+    </li>
+</ul>
+<br>
+<router-outlet>
+
+</router-outlet>

@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CarService } from '../../services/car.service';
 import { Producto } from '../../interfaces/Producto';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-card',
@@ -25,7 +27,7 @@ export class CardComponent implements OnInit {
 
   public car:string = "assets/carrito1.png"
 
-  constructor( private carService:CarService) { }
+  constructor( private carService:CarService ,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -53,5 +55,7 @@ export class CardComponent implements OnInit {
 
   buy(){
     console.log("compraqrr")
+    this.router.navigateByUrl("/buy")
+
   }
 }

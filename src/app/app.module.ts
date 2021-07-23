@@ -10,12 +10,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslationComponent } from './translation/translation.component';
 import { CardComponent } from './components/card/card.component';
+import { CarComponent } from './pages/car/car.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TranslationComponent,
-    CardComponent
+    CardComponent,
+    CarComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
