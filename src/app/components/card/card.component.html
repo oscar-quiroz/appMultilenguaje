@@ -1,16 +1,21 @@
 <div class="card">
-    <div class="image">
-        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/6117e9a50d5e41d68a57ab2900ba9869_9366/Tenis_Stan_Smith_Blanco_EF4480_01_standard.jpg" alt="">
+    <div class="image ">
+        <img src="{{img}} " altt=" ">
+    </div>
+    <div class="car">
+        <img class="carrito " (click)="addCar() " src="{{car}} " alt=" ">
     </div>
     <div class="price">
-        <p style="color: rgb(207, 44, 44);">${{ 169000 | number}}</p>
-        <p style="color: rgb(146, 146, 146);  text-decoration: line-through;">${{200000 | number}}</p>
+        <p style="color: rgb(207, 44, 44); ">${{ 169000 | number}}</p>
+        <p style="color: rgb(146, 146, 146); text-decoration: line-through; ">${{200000 | number}}</p>
     </div>
 
     <div class="info">
-        <p>Tenis Stan Smith (UNISEX) originals</p>
-        <p>Adidas</p>
+        <p>{{nombre }}</p>
+        <p>{{'proveedor' | translate}}</p>
     </div>
+
+    <button class="buy " (click)="buy() ">{{ 'comprar' | translate }}</button>
 
 
 </div>

@@ -36,14 +36,7 @@
 </ul>
 <br>
 <div class="container parent">
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
+    <app-card *ngFor="let item of list" [img]="item.img" [nombre]="item.nombre" [marca]="item.proveedor"></app-card>
+
 
 </div>

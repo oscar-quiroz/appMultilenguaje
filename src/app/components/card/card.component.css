@@ -1,18 +1,39 @@
 .card {
     width: 300px;
     height: 300px;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
     border: none;
     border-radius: 0px;
+    cursor: zoom-in;
+}
+
+.card:hover>.price {
+    transform: translateY(-10px);
+}
+
+.card:hover>.image {
+    transform: scale(1.2, 1.2);
 }
 
 .image {
     object-fit: cover;
+    transition: transform 0.5s;
 }
 
 img {
     width: 300px;
+}
+
+.car {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.carrito {
+    width: 25px;
 }
 
 .price {
@@ -23,9 +44,8 @@ img {
     bottom: 60px;
     background-color: white;
     padding: 0px 2px 0px 2px;
+    transition: transform 0.5s;
 }
-
-.not-available {}
 
 .info {
     background-color: white;
@@ -33,6 +53,17 @@ img {
     height: 60px;
     position: absolute;
     bottom: 0px;
+}
+
+.buy {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    border: none;
+    background-color: rgb(211, 56, 56);
+    color: white;
+    font-size: 15px;
 }
 
 p {

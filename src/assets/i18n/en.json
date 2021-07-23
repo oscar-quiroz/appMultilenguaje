@@ -1,7 +1,10 @@
 {
     "titulo.principal": "Titulo en ingles",
-    "idioma": "Langauge",
+    "idioma": "Language",
     "home": "Home",
     "news": "News",
-    "contact": "Contact"
+    "contact": "Contact",
+    "proveedor": "Adidas en",
+    "comprar": "Buy now"
+
 }
