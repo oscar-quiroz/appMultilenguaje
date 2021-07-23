@@ -1,0 +1,36 @@
+        .flex {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+        
+        .img {
+            width: 700px;
+        }
+        
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 500px;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+        button {
+            border: none;
+            padding: 10px;
+            font-size: 20px;
+        }
+        
+        .buy {
+            background-color: #2ada71;
+        }
+        
+        .car {
+            background-color: #d4d4d4;
+        }
