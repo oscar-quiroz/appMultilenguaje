@@ -1,31 +1,37 @@
 import { Injectable } from '@angular/core';
 import { Producto } from '../interfaces/Producto';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CarService {
+  list: any[] = [];
+  listFirestore: Observable<any[]>;
 
-  list:any[]=[]
-
-  constructor() { }
-
-  addProduct(producto:Producto){
-    this.list.push(producto)
+  constructor(firestore: AngularFirestore) {
+    this.listFirestore = firestore.collection('listFirestore').valueChanges();
   }
 
-  deleteProduct(id:number){
-   let j = this.list.indexOf(this.list.find((item)=>{ 
-     if(item.id == id){
-       return true;
-     }else{
-       return false;
-     }
-   }))
-  this.list.splice(j,1)
+  addProduct(producto: Producto) {
+    this.list.push(producto);
   }
 
-  print(){
-    console.log(this.list)
+  deleteProduct(id: number) {
+    let j = this.list.indexOf(
+      this.list.find((item) => {
+        if (item.id == id) {
+          return true;
+        } else {
+          return false;
+        }
+      })
+    );
+    this.list.splice(j, 1);
+  }
+
+  print() {
+    console.log(this.list);
   }
 }

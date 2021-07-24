@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "store-zapatillas": {
+      "hosting": {
+        "appMultilenguaje": [
+          "store-zapatillas"
+        ]
+      }
+    }
+  }
+}

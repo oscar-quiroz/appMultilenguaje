@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
   public language:string = "es";
   public activeHam:string = "";
   
-  constructor(private translate:TranslateService, ) { 
+  constructor(private translate:TranslateService ) { 
     this.translate.setDefaultLang(this.language);
     
   }

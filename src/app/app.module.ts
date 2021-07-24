@@ -12,6 +12,8 @@ import { TranslationComponent } from './translation/translation.component';
 import { CardComponent } from './components/card/card.component';
 import { CarComponent } from './pages/car/car.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { DetailsComponent } from './pages/details/details.component';
         },
         deps: [ HttpClient ]
       }
-    })
+    }),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
