@@ -34,3 +34,18 @@
         .car {
             background-color: #d4d4d4;
         }
+        
+        .tallas {
+            justify-content: space-around;
+        }
+        
+        .item {
+            padding: 20px 20px 20px 20px;
+            border: 1px solid black;
+        }
+        
+        .item:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
