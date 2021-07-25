@@ -11,12 +11,14 @@ export class CarComponent implements OnInit {
 
   list: any[] = [];
   isVoid:boolean= false;
+  total = 0;
 
   constructor(private carService:CarService) { }
 
   ngOnInit(): void {
    this.list = this.carService.getCarList();
    this.isvoidCar();
+   this.total = 0;
   }
 
 
@@ -31,4 +33,12 @@ export class CarComponent implements OnInit {
 
     this.isvoidCar();
   }
+
+  calcularTotal(){
+   return this.carService.calcularTotal()
+  }
+
 }
+
+ 
+

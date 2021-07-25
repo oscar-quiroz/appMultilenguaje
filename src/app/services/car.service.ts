@@ -14,6 +14,7 @@ export class CarService {
   listProdcuts: Observable<any[]>;
   list: any[] = [];
   prodcut:any={}
+  total = 0;
 
 
   constructor( firestore: AngularFirestore) {
@@ -61,6 +62,14 @@ export class CarService {
 
     getLength(){
       return this.list.length;
+    }
+
+    calcularTotal(){
+      this.total=0;
+      this.list.forEach(element => {
+        this.total +=  element.precio
+      });
+      return this.total ;
     }
 
     // console.log(producto)

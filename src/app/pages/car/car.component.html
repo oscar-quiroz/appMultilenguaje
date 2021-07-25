@@ -4,7 +4,24 @@
     <button routerLink="/"> {{"comenzar"|translate}}</button>
 </div>
 
-<div *ngIf="!isVoid" class="container sep">
+<div class="container car">
+    <div *ngIf="!isVoid" class=" sep">
+        <app-card-car *ngFor="let item of list" [id]='item.id' [img]="item.img" [nombre]="item.nombre" [marca]="item.proveedor" [precio]="item.precio" [disponible]="item.disponible" (length)="recibirRespuesta($event)"> </app-card-car>
+    </div>
 
-    <app-card-car *ngFor="let item of list" [id]='item.id' [img]="item.img" [nombre]="item.nombre" [marca]="item.proveedor" [precio]="item.precio" [disponible]="item.disponible" (length)="recibirRespuesta($event)"> </app-card-car>
+    <div *ngIf="!isVoid" class="recibo">
+        <button> Ir a pagar</button>
+        <div class="resume">
+            <h2>Resumen del pedido</h2>
+            <div class="texto">
+                <p>Envio</p>
+                <p><strong> GRATIS</strong> </p>
+            </div>
+            <div class="texto">
+                <p> <strong>Valor del pedido</strong>
+                </p>
+                <p>${{calcularTotal()| number}}</p>
+            </div>
+        </div>
+    </div>
 </div>
