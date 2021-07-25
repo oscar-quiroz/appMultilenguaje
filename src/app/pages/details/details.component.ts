@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CarService } from '../../services/car.service';
 import { Producto } from '../../interfaces/Producto';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -11,6 +12,8 @@ import { Producto } from '../../interfaces/Producto';
 })
 export class DetailsComponent implements OnInit {
 
+
+  carInfo: Subscription = new Subscription();
   prodcuts:any={}
   prodcut:any={}
   count:number=0;
@@ -28,18 +31,22 @@ export class DetailsComponent implements OnInit {
        })
     });
 
+  
+
   }
 
 
   addProduct(product:Producto){
     if(this.count ===0){
       this.carService.addProduct(product)
+      this.carService.carInfo.emit(this.carService.getLength())
       this.carService.print()
       this.texto ="texto.carro2"
       this.count=1;
     }else{
       console.log("Quitar del carro")
       this.carService.deleteProduct(this.prodcut.id)
+      this.carService.carInfo.emit(this.carService.getLength())
       this.carService.print()
       this.texto ="texto.carro"
       this.count = 0;

@@ -36,12 +36,11 @@ export class CardCarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public generataRandom(min:number, max:number){
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+
 
   public delete(id:number){
     this.carService.deleteProduct(id)
+    this.carService.carInfo.emit(this.carService.getLength())
     this.carService.print()
     this.emitir();
   }
