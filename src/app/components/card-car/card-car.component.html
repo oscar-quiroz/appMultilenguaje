@@ -1,0 +1,26 @@
+<div class="card-car">
+
+    <div class="img">
+        <img src="{{img}}" alt="">
+    </div>
+
+    <div class="info">
+        <div class="title">
+            <div>
+                <p>{{nombre}}</p>
+            </div>
+            <div>
+                <p style="color: rgb(207, 44, 44)">${{precio |number}}</p>
+            </div>
+            <div>
+                <p style="color: rgb(146, 146, 146);;text-decoration: line-through">${{generataRandom(200000,345000) |number}}</p>
+            </div>
+
+        </div>
+        <div>
+            <p>Tamaño: US 11.5</p>
+            <p><strong>Ultimas unidades</strong></p>
+            <button class="boton">Quitar</button>
+        </div>
+    </div>
+</div>

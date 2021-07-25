@@ -14,6 +14,7 @@ import { CarComponent } from './pages/car/car.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { CardCarComponent } from './components/card-car/card-car.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { environment } from '../environments/environment';
     TranslationComponent,
     CardComponent,
     CarComponent,
-    DetailsComponent
+    DetailsComponent,
+    CardCarComponent
   ],
   imports: [
     BrowserModule,
