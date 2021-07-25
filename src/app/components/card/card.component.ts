@@ -41,13 +41,15 @@ export class CardComponent implements OnInit {
         proveedor: this.marca,
         precio: this.precio,
         disponible: this.disponible,
-        img: this.img,
+        img: this.img
       };
       this.carService.addProduct(this.producto);
+      this.carService.carInfo.emit(this.carService.getLength())
       this.carService.print();
     } else {
       this.car = 'assets/carrito1.png';
       this.carService.deleteProduct(this.producto.id);
+      this.carService.carInfo.emit(this.carService.getLength())
       this.carService.print();
     }
   }
@@ -57,7 +59,5 @@ export class CardComponent implements OnInit {
     this.router.navigateByUrl(`/details/${id}`);
   }
 
-  public generataRandom(min:number, max:number){
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+ 
 }

@@ -5,9 +5,17 @@
     "news": "Noticias",
     "contact": "Contacto",
     "proveedor": "Adidas",
-    "comprar": "Comprar ahora",
+    "comprar.ahora": "Comprar ahora",
     "texto.carro": "Enviar al carrito",
     "texto.carro2": "Quitar del carrito",
-    "carrito": "carrito"
+    "carrito": "Carrito",
+    "titulo.carrito": "El carrito esta vacío",
+    "subtitulo.carrito": "Una vez que añadas algo a tu carrito, aparecerá aquí. ¿Listo para empezar?",
+    "comenzar": "Comenzar",
+    "comprar": "Comprar",
+    "tamaño": "Tamaño",
+    "ultimas.unidades": "Ultimas unidades",
+    "quitar": "Quitar"
+
 
 }

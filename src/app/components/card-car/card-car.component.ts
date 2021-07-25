@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+
 import { Producto } from '../../interfaces/Producto';
+import { CarService } from '../../services/car.service';
 
 @Component({
   selector: 'app-card-car',
@@ -25,13 +28,26 @@ export class CardCarComponent implements OnInit {
   @Input() precio: number = 0;
   @Input() disponible:boolean = false;
 
-  constructor() { }
+  @Output() length: EventEmitter<string> = new EventEmitter();
+
+  constructor(private carService:CarService) { }
+
 
   ngOnInit(): void {
   }
 
   public generataRandom(min:number, max:number){
     return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  public delete(id:number){
+    this.carService.deleteProduct(id)
+    this.carService.print()
+    this.emitir();
+  }
+
+  emitir(){
+    this.length.emit("recargar")
   }
 
 }

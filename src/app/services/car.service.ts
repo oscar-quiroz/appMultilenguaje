@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Producto } from '../interfaces/Producto';
-import {map} from 'rxjs/operators'
+
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -8,6 +8,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CarService {
+
+
+  public carInfo: EventEmitter<any> = new EventEmitter<any>();
   listProdcuts: Observable<any[]>;
   list: any[] = [];
   prodcut:any={}
@@ -54,6 +57,10 @@ export class CarService {
 
     getList(){
       return this.listProdcuts;
+    }
+
+    getLength(){
+      return this.list.length;
     }
 
     // console.log(producto)

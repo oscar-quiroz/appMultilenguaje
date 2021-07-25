@@ -5,7 +5,15 @@
     "news": "Notícia",
     "contact": "Contato ",
     "proveedor": "Adidas po",
-    "comprar": "Compre agora",
+    "comprar.ahora": "Compre agora",
     "texto.carro": "Enviar para o carro",
-    "texto.carro2": "remover do carro "
+    "texto.carro2": "remover do carro ",
+    "carrito": "Carrinho",
+    "titulo.carrito": "O carrinho esta vazio",
+    "subtitulo.carrito": "Depois de adicionar algo ao seu carrinho, ele aparecerá aqui. Pronto para começar?",
+    "comenzar": "Começar ",
+    "comprar": "Compre",
+    "tamaño": "Tamanho",
+    "ultimas.unidades": "Últimas unidades",
+    "quitar": "Adiar"
 }

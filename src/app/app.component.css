@@ -51,3 +51,19 @@
         .hamburger {
             display: none;
         }
+        
+        .car {
+            position: relative;
+        }
+        
+        .count {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0px;
+            padding: 4px;
+            left: 150px;
+            border-radius: 50%;
+            background-color: red;
+            font-size: 10px;
+        }

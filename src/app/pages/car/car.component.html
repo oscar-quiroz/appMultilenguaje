@@ -1,4 +1,10 @@
-<div class="container sep">
+<div *ngIf="isVoid" class="container">
+    <h1>{{"titulo.carrito"|translate}}</h1>
+    <p> {{"subtitulo.carrito"|translate}}</p>
+    <button routerLink="/"> {{"comenzar"|translate}}</button>
+</div>
 
-    <app-card-car *ngFor="let item of list" [id]='item.id' [img]="item.img" [nombre]="item.nombre" [marca]="item.proveedor" [precio]="item.precio" [disponible]="item.disponible"> </app-card-car>
+<div *ngIf="!isVoid" class="container sep">
+
+    <app-card-car *ngFor="let item of list" [id]='item.id' [img]="item.img" [nombre]="item.nombre" [marca]="item.proveedor" [precio]="item.precio" [disponible]="item.disponible" (length)="recibirRespuesta($event)"> </app-card-car>
 </div>

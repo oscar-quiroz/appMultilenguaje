@@ -1,9 +1,9 @@
 <ul>
     <li>
-        <a>{{ 'home' | translate }}</a>
+        <a routerLink="/">{{ 'home' | translate }}</a>
     </li>
-    <li><a>{{ 'news' | translate }}</a></li>
-    <li><a routerLink="/car">{{ 'carrtio' | translate }}</a></li>
+    <li><a routerLink="/car">{{ 'carrito' | translate }} <img class="car" width="25px" src="assets/car.png" alt=" " /> <div  *ngIf="mayor" class="count"
+        >{{count}}</div></a></li>
 
     <li style="float: right; ">
 

@@ -5,8 +5,16 @@
     "news": "News",
     "contact": "Contact",
     "proveedor": "Adidas en",
-    "comprar": "Buy now",
+    "comprar.ahora": "Buy now",
     "texto.carro": "Send to cart ",
-    "texto.carro2": "Remove from cart "
+    "texto.carro2": "Remove from cart ",
+    "carrito": "Cart",
+    "titulo.carrito": "The cart is empty",
+    "subtitulo.carrito": "Once you add something to your cart, it will appear here. Ready to start?",
+    "comenzar": "Begin",
+    "comprar": "Buy",
+    "tamaño": "Size",
+    "ultimas.unidades": "Last units",
+    "quitar": "Remove"
 
 }

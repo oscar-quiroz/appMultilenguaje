@@ -15,6 +15,7 @@ type NewType = Producto[];
 export class TranslationComponent implements OnInit {
   public language: string = 'es';
   public activeHam: string = '';
+  public isReady: boolean ;
 
   list: Observable<any[]>;
 
@@ -22,8 +23,14 @@ export class TranslationComponent implements OnInit {
     private translate: TranslateService,
     private carService:CarService
   ) {
+    this.isReady=false;
     this.translate.setDefaultLang(this.language);
     this.list = this.carService.getList()
+    this.list.subscribe( (data:any) =>{
+      this.isReady=true;
+    }
+    )
+   
   }
 
   ngOnInit(): void {}
