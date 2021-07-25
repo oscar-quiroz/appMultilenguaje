@@ -1,1 +1,1 @@
-<p>{{ 'comprar'|translate}}</p>
+<app-card *ngFor="let item of list" [id]='item.id' [img]="item.img" [nombre]="item.nombre" [marca]="item.proveedor" [precio]="item.precio" [disponible]="item.disponible"> </app-card>

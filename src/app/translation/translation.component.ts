@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Producto } from '../interfaces/Producto';
 import { CarService } from '../services/car.service';
 import { Observable } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
+
 
 type NewType = Producto[];
 
@@ -20,11 +20,10 @@ export class TranslationComponent implements OnInit {
 
   constructor(
     private translate: TranslateService,
-    firestore: AngularFirestore
+    private carService:CarService
   ) {
     this.translate.setDefaultLang(this.language);
-
-    this.list = firestore.collection('Producto').valueChanges();
+    this.list = this.carService.getList()
   }
 
   ngOnInit(): void {}
@@ -41,4 +40,6 @@ export class TranslationComponent implements OnInit {
       this.activeHam = 'is-active';
     }
   }
+
+ 
 }

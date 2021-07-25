@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Producto } from '../interfaces/Producto';
+import {map} from 'rxjs/operators'
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -7,11 +8,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CarService {
+  listProdcuts: Observable<any[]>;
   list: any[] = [];
-  listFirestore: Observable<any[]>;
+  prodcut:any={}
 
-  constructor(firestore: AngularFirestore) {
-    this.listFirestore = firestore.collection('listFirestore').valueChanges();
+
+  constructor( firestore: AngularFirestore) {
+    this.listProdcuts = firestore.collection('Producto').valueChanges();
   }
 
   addProduct(producto: Producto) {
@@ -34,4 +37,25 @@ export class CarService {
   print() {
     console.log(this.list);
   }
+
+  getCarList(){
+    return this.list
+  }
+
+
+   //me suscribo a una matriz observable de productos, data es la matriz
+    // reocorro data buscando un item el cual posea el id suministrado y ahi acaba
+   getProduct(id: number) {
+      this.listProdcuts.subscribe(data => {
+       this.prodcut = data.find((item:any) => item.id == id)
+       return this.prodcut
+      })
+    }
+
+    getList(){
+      return this.listProdcuts;
+    }
+
+    // console.log(producto)
+
 }

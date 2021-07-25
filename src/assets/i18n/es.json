@@ -5,6 +5,9 @@
     "news": "Noticias",
     "contact": "Contacto",
     "proveedor": "Adidas",
-    "comprar": "Comprar ahora"
+    "comprar": "Comprar ahora",
+    "texto.carro": "Enviar al carrito",
+    "texto.carro2": "Quitar del carrito",
+    "carrito": "carrito"
 
 }

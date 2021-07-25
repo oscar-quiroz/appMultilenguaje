@@ -19,10 +19,12 @@ export class CardComponent implements OnInit {
   };
   carro: string = '';
 
+  @Input() id: number = 0;
   @Input() img: string = '';
   @Input() nombre: string = '';
   @Input() marca: string = '';
   @Input() precio: number = 0;
+  @Input() disponible:boolean = false;
 
   public car: string = 'assets/carrito1.png';
 
@@ -34,11 +36,11 @@ export class CardComponent implements OnInit {
     if (this.car === 'assets/carrito1.png') {
       this.car = 'assets/carrito2.png';
       this.producto = {
-        id: 2,
+        id: this.id,
         nombre: this.nombre,
         proveedor: this.marca,
-        precio: 20,
-        disponible: true,
+        precio: this.precio,
+        disponible: this.disponible,
         img: this.img,
       };
       this.carService.addProduct(this.producto);
@@ -50,8 +52,12 @@ export class CardComponent implements OnInit {
     }
   }
 
-  buy() {
+  buy(id: number) {
     console.log('compraqrr');
-    this.router.navigateByUrl('/buy');
+    this.router.navigateByUrl(`/details/${id}`);
+  }
+
+  public generataRandom(min:number, max:number){
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 }

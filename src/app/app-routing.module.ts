@@ -9,10 +9,10 @@ const routes: Routes = [{
     path: '',
     component: TranslationComponent,
   },{
-    path: 'details',
+    path: 'details/:id',
     component: DetailsComponent,
   },{
-    path: 'buy',
+    path: 'car',
     component: CarComponent,
   }
 ];

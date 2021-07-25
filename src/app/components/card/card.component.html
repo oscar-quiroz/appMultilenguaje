@@ -7,7 +7,7 @@
     </div>
     <div class="price">
         <p style="color: rgb(207, 44, 44); ">${{ precio| number}}</p>
-        <p style="color: rgb(146, 146, 146); text-decoration: line-through; ">${{200000 | number}}</p>
+        <p style="color: rgb(146, 146, 146); text-decoration: line-through; ">${{generataRandom(200000,345000) | number}}</p>
     </div>
 
     <div class="info">
@@ -15,7 +15,7 @@
         <p>{{'proveedor' | translate}}</p>
     </div>
 
-    <button class="buy " (click)="buy() ">{{ 'comprar' | translate }}</button>
+    <button class="buy " (click)="buy(id) ">{{ 'comprar' | translate }}</button>
 
 
 </div>
