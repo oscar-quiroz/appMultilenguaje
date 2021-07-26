@@ -15,6 +15,12 @@
     "comprar": "Buy",
     "tamaño": "Size",
     "ultimas.unidades": "Last units",
-    "quitar": "Remove"
+    "quitar": "Remove",
+    "irApagar": "Go to pay",
+    "Resumen": "Order sumary",
+    "Envio": "Delivery",
+    "gratis": "FREE",
+    "Valor": "Total",
+    "tu.carro": "Your cart"
 
 }

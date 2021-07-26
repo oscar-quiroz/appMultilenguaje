@@ -5,20 +5,24 @@
 </div>
 
 <div class="container car">
+
     <div *ngIf="!isVoid" class=" sep">
+        <h1><strong>{{"tu.carro" | translate}}</strong></h1>
         <app-card-car *ngFor="let item of list" [id]='item.id' [img]="item.img" [nombre]="item.nombre" [marca]="item.proveedor" [precio]="item.precio" [disponible]="item.disponible" (length)="recibirRespuesta($event)"> </app-card-car>
     </div>
 
     <div *ngIf="!isVoid" class="recibo">
-        <button> Ir a pagar</button>
+        <button> {{"irApagar"|translate}}</button>
         <div class="resume">
-            <h2>Resumen del pedido</h2>
+            <h2>{{"Resumen"|translate}}
+            </h2>
             <div class="texto">
-                <p>Envio</p>
-                <p><strong> GRATIS</strong> </p>
+                <p>{{"Envio"|translate}}
+                </p>
+                <p><strong> {{"gratis"|translate}}</strong> </p>
             </div>
             <div class="texto">
-                <p> <strong>Valor del pedido</strong>
+                <p> <strong>{{"Valor"|translate}}</strong>
                 </p>
                 <p>${{calcularTotal()| number}}</p>
             </div>

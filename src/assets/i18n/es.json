@@ -15,7 +15,13 @@
     "comprar": "Comprar",
     "tamaño": "Tamaño",
     "ultimas.unidades": "Ultimas unidades",
-    "quitar": "Quitar"
+    "quitar": "Quitar",
+    "irApagar": "Ir a pagar",
+    "Resumen": "Resumen del envio",
+    "Envio": "Envio",
+    "gratis": "GRATIS",
+    "Valor": "Valor del pedido",
+    "tu.carro": "Tu carrito"
 
 
 }
